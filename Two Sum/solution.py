@@ -1,8 +1,26 @@
-print 'hello world'
+def solution(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+
+    num_dict = dict()
+    answer = []
+
+    for idx, num in enumerate(nums):
+        expect_num_two = target - num
+        print 'expect_num_two: ' + str (expect_num_two)
+        actual_num_two_idx = num_dict.get(expect_num_two)
+        print 'actual_num_two_idx: ' + str (actual_num_two_idx)
+
+        if actual_num_two_idx is None:
+            num_dict[num] = idx
+        else:
+            answer.append(actual_num_two_idx)
+            answer.append(idx)
+
+    return answer
 
 if __name__ == "__main__":
-	print 'This is the main check\n When the Python interpreter reads a source file, \n' \
-	'it executes all of the code found in it. Before executing the code, it will define a few special variables. \n' \
-	' For example, if the python interpreter is running that module (the source file) as the main program, it sets the \n' \
-	'special __name__ variable to have a value "__main__". If this file is being imported from another module, __name__ will \n' \
-	'be set to the module\'s name.' 
+    print solution([2, 7, 11, 15], 9);
