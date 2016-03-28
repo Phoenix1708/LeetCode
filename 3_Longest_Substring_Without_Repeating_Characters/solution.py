@@ -35,7 +35,6 @@ class Solution(object):
             current_best = current_length
 
         return current_best
-        # return len(longest_substring)
 
 
 if __name__ == "__main__":
