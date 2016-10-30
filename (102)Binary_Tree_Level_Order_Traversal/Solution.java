@@ -23,9 +23,6 @@ public class Solution {
 
     public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> answer = new ArrayList<>();
-        if (root == null) {
-            return answer;
-        }
         // Store the values of node at one level
         List<Integer> oneLevel = new ArrayList<>();
 
