@@ -5,6 +5,8 @@ public class Linear {
             return 0;
         }
 
+        if (m > n) return uniquePaths(n, m);
+
         int[] sum = new int[n];
 
         // initialise - starting values
