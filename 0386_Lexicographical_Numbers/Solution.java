@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.ArrayList;
 
 public class Solution {
@@ -10,12 +11,12 @@ public class Solution {
         return answer;
     }
 
-    dfs(int root, int n, List<Integer> results) {
+    void dfs(int root, int n, List<Integer> results) {
     	if (root > n) {
     		return;
     	} else {
     		// visit current node
-    		results.add(root)
+    		results.add(root);
     		// visit all child nodes
     		// only 0 - 9 anyway
     		int nextLevelRoot = 10 * root;
