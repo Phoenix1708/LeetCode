@@ -5,6 +5,8 @@ public class Solution {
         	// get last digit by using reminder
         	// divide by 10 and get reminder again to get the next one
         	// ans scale the digit to its right position -- x 10
+            // result * 10 here result is actually the digit from 
+            // last iteration
             result = result * 10 + x % 10;
             x /= 10;
         }
